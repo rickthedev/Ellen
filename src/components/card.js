@@ -3,7 +3,10 @@ import React from "react"
 export default function Card({ title }) {
   return (
     <div>
-      <p>{title}</p>
+      <img src={image} alt={availability} />
+      <p>{availability}</p>
+      <p>{size}</p>
+      <p>{price}</p>
     </div>
   )
 }

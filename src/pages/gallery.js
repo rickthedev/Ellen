@@ -10,9 +10,11 @@ export default function GalleryPage() {
         edges {
           node {
             frontmatter {
-              title
+              availability
+              size
+              price
+              image
             }
-            html
           }
         }
       }
@@ -21,7 +23,15 @@ export default function GalleryPage() {
   return (
     <Layout>
       {data.allMarkdownRemark.edges.map((edge, index) => {
-        return <Card key={index} title={edge.node.frontmatter.title}></Card>
+        return (
+          <Card
+            key={index}
+            availability={edge.node.frontmatter.availability}
+            size={edge.node.frontmatter.size}
+            price={edge.node.frontmatter.price}
+            image={edge.node.frontmatter.image}
+          ></Card>
+        )
       })}
     </Layout>
   )
