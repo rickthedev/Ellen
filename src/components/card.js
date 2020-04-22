@@ -1,6 +1,6 @@
 import React from "react"
 
-export default function Card({ title }) {
+export default function Card({ image, availability, size, price }) {
   return (
     <div>
       <img src={image} alt={availability} />
