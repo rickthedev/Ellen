@@ -10,6 +10,11 @@ export default function Navigation() {
       <Wrapper>
         <ul>
           <li>
+            <Link className={NavigationStyles.logo} to="/">
+              LOGO
+            </Link>
+          </li>
+          <li>
             <Link
               className={NavigationStyles.link}
               activeClassName={NavigationStyles.linkActive}
