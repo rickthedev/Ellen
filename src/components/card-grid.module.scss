@@ -1,5 +1,13 @@
+@import "../sass/abstract.scss";
+
 .grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 1rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  @include respond-above(xs) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @include respond-above(md) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  gap: 1rem;
 }

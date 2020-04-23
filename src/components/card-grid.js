@@ -15,6 +15,7 @@ export default function CardGrid() {
             }
             frontmatter {
               availability
+              title
               size
               price
               image
@@ -32,6 +33,7 @@ export default function CardGrid() {
             key={index}
             slug={edge.node.fields.slug}
             availability={edge.node.frontmatter.availability}
+            title={edge.node.frontmatter.title}
             size={edge.node.frontmatter.size}
             price={edge.node.frontmatter.price}
             image={edge.node.frontmatter.image}

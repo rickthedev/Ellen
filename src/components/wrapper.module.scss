@@ -1,5 +1,16 @@
+@import "../sass/abstract.scss";
+
 .wrapper {
-    width: 1140px;
-    margin: 0 auto;
-    height: 100%;
+  width: 100%;
+  @include respond-above(sm) {
+    max-width: 750px;
+  }
+  @include respond-above(md) {
+    max-width: 970px;
+  }
+  @include respond-above(lg) {
+    max-width: 1170px;
+  }
+  margin: 0 auto;
+  height: 100%;
 }
