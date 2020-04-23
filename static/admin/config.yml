@@ -27,4 +27,5 @@ collections:
           widget: "select",
           options: ["Available", "Reserved", "Sold"],
         }
-      - { label: 'Description', name: 'description', widget: 'markdown' }
+      - {label: "Description", name: "description", widget: "text"}
+    
