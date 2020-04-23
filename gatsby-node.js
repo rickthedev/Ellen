@@ -8,6 +8,11 @@ exports.onCreateNode = ({ node, actions }) => {
       name: `slug`,
       value: node.frontmatter.title,
     })
+    createNodeField({
+      node,
+      name: `type`,
+      value: node.frontmatter.type,
+    })
   }
 }
 

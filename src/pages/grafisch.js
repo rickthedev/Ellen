@@ -4,13 +4,12 @@ import CardGrid from "../components/card-grid"
 import Wrapper from "../components/wrapper"
 import { useStaticQuery, graphql } from "gatsby"
 
-
-export default function SchilderijPage() {
+export default function GrafischPage() {
   const data = useStaticQuery(graphql`
     query {
       allMarkdownRemark(
         sort: { fields: frontmatter___title, order: ASC }
-        filter: { frontmatter: { type: { eq: "Schilderij" } } }
+        filter: { frontmatter: { type: { eq: "Grafisch" } } }
       ) {
         edges {
           node {
@@ -30,10 +29,11 @@ export default function SchilderijPage() {
       }
     }
   `)
+
   return (
     <Layout>
       <Wrapper>
-        <h1>Gallery</h1>
+        <h1>Grafisch</h1>
         <CardGrid data={data}></CardGrid>
       </Wrapper>
     </Layout>
