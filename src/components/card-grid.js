@@ -4,7 +4,7 @@ import Card from "./card"
 
 import CardGridStyles from "./card-grid.module.scss"
 
-export default function CardGrid() {
+export default function CardGrid({ type }) {
   const data = useStaticQuery(graphql`
     query {
       allMarkdownRemark(sort: { fields: frontmatter___title, order: ASC }) {
@@ -19,6 +19,7 @@ export default function CardGrid() {
               size
               price
               image
+              type
             }
           }
         }
@@ -28,17 +29,19 @@ export default function CardGrid() {
   return (
     <div className={CardGridStyles.grid}>
       {data.allMarkdownRemark.edges.map((edge, index) => {
-        return (
-          <Card
-            key={index}
-            slug={edge.node.fields.slug}
-            availability={edge.node.frontmatter.availability}
-            title={edge.node.frontmatter.title}
-            size={edge.node.frontmatter.size}
-            price={edge.node.frontmatter.price}
-            image={edge.node.frontmatter.image}
-          ></Card>
-        )
+        if (edge.node.frontmatter.type === type) {
+          return (
+            <Card
+              key={index}
+              slug={edge.node.fields.slug}
+              availability={edge.node.frontmatter.availability}
+              title={edge.node.frontmatter.title}
+              size={edge.node.frontmatter.size}
+              price={edge.node.frontmatter.price}
+              image={edge.node.frontmatter.image}
+            ></Card>
+          )
+        }
       })}
     </div>
   )

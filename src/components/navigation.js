@@ -18,15 +18,6 @@ export default function Navigation() {
             <Link
               className={NavigationStyles.link}
               activeClassName={NavigationStyles.linkActive}
-              to="/"
-            >
-              Home
-            </Link>
-          </li>
-          <li>
-            <Link
-              className={NavigationStyles.link}
-              activeClassName={NavigationStyles.linkActive}
               to="/about"
             >
               About
@@ -36,9 +27,27 @@ export default function Navigation() {
             <Link
               className={NavigationStyles.link}
               activeClassName={NavigationStyles.linkActive}
-              to="/gallery"
+              to="/schilderijen"
             >
-              Gallery
+              Schilderijen
+            </Link>
+          </li>
+          <li>
+            <Link
+              className={NavigationStyles.link}
+              activeClassName={NavigationStyles.linkActive}
+              to="/goudsmit"
+            >
+              Goudsmit
+            </Link>
+          </li>
+          <li>
+            <Link
+              className={NavigationStyles.link}
+              activeClassName={NavigationStyles.linkActive}
+              to="/grafisch"
+            >
+              Grafisch
             </Link>
           </li>
         </ul>

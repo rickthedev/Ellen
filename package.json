@@ -14,6 +14,9 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "dependencies": {
+    "@reach/dialog": "^0.10.1",
+    "@reach/tabs": "^0.10.1",
+    "@reach/visually-hidden": "^0.10.1",
     "gatsby": "^2.20.25",
     "gatsby-plugin-netlify-cms": "^4.2.4",
     "gatsby-plugin-sass": "^2.2.3",

@@ -8,7 +8,7 @@ export default function GalleryPage() {
     <Layout>
       <Wrapper>
         <h1>Gallery</h1>
-        <CardGrid></CardGrid>
+        <CardGrid type="schilderij"></CardGrid>
       </Wrapper>
     </Layout>
   )
