@@ -14,8 +14,8 @@ export const query = graphql`
         availability
         price
         image
+        description
       }
-      html
     }
   }
 `
@@ -27,6 +27,7 @@ export default function BlogPost({ data }) {
     size,
     availability,
     price,
+    description,
   } = data.markdownRemark.frontmatter
 
   return (
@@ -38,10 +39,9 @@ export default function BlogPost({ data }) {
           <p>{size}</p>
           <p>{availability}</p>
           <p>{price}</p>
-          <div
-            className={BlogPostStyles.description}
-            dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}
-          ></div>
+          <div className={BlogPostStyles.description}>
+            <p>{description}</p>
+          </div>
         </div>
       </Wrapper>
     </Layout>
