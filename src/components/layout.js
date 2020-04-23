@@ -7,9 +7,11 @@ import LayoutStyles from "./layout.module.scss"
 
 export default function Layout(props) {
   return (
-    <div>
-      <Navigation></Navigation>
-      {props.children}
+    <div className={LayoutStyles.page}>
+      <div className={LayoutStyles.container}>
+        <Navigation></Navigation>
+        <div className={LayoutStyles.content}>{props.children}</div>
+      </div>
       <Footer></Footer>
     </div>
   )
