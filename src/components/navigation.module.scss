@@ -1,0 +1,32 @@
+@import "../sass/variables.scss";
+
+.navbar {
+  height: 60px;
+  background-color: $color-black;
+
+  ul {
+    list-style-type: none;
+    height: 100%;
+
+    width: 1140px;
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+  }
+
+  li {
+    &:not(:last-child) {
+      margin-right: 1rem;
+    }
+  }
+}
+
+.link {
+  text-decoration: none;
+  color: $color-grey-light;
+}
+
+.link-active {
+  color: $color-white;
+}

@@ -1,18 +1,38 @@
 import React from "react"
 import { Link } from "gatsby"
 
+import NavigationStyles from "./navigation.module.scss"
+
 export default function Navigation() {
   return (
-    <nav>
+    <nav className={NavigationStyles.navbar}>
       <ul>
         <li>
-          <Link to="/">Home</Link>
+          <Link
+            className={NavigationStyles.link}
+            activeClassName={NavigationStyles.linkActive}
+            to="/"
+          >
+            Home
+          </Link>
         </li>
         <li>
-          <Link>About</Link>
+          <Link
+            className={NavigationStyles.link}
+            activeClassName={NavigationStyles.linkActive}
+            to="/about"
+          >
+            About
+          </Link>
         </li>
         <li>
-          <Link to="/gallery">Gallery</Link>
+          <Link
+            className={NavigationStyles.link}
+            activeClassName={NavigationStyles.linkActive}
+            to="/gallery"
+          >
+            Gallery
+          </Link>
         </li>
       </ul>
     </nav>
