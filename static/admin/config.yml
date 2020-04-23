@@ -19,5 +19,11 @@ collections:
           label: "Availability",
           name: "availability",
           widget: "select",
-          options: ["available", "reserved", "sold"],
+          options: ["Available", "Reserved", "Sold"],
+        }
+      - {
+          label: "Type",
+          name: "type",
+          widget: "select",
+          options: ["Schilderij", "Grafisch", "Goudsmit"],
         }
