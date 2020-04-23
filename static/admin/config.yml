@@ -11,6 +11,12 @@ collections:
     folder: "/src/cards"
     create: true
     fields:
+      - {
+          label: "Type",
+          name: "type",
+          widget: "select",
+          options: ["Schilderij", "Grafisch", "Goudsmit"],
+        }
       - { label: "Image", name: "image", widget: "image" }
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Size", name: "size", widget: "string" }
@@ -21,9 +27,4 @@ collections:
           widget: "select",
           options: ["Available", "Reserved", "Sold"],
         }
-      - {
-          label: "Type",
-          name: "type",
-          widget: "select",
-          options: ["Schilderij", "Grafisch", "Goudsmit"],
-        }
+      - { label: 'Description', name: 'description', widget: 'markdown' }

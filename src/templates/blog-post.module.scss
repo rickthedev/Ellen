@@ -1,0 +1,32 @@
+@import "../sass/variables.scss";
+@import "../sass/abstract.scss";
+
+.post {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.5;
+
+  @include respond-above(sm) {
+    // width: 80%;
+  }
+
+  margin: 0 auto;
+
+  p {
+    color: $color-grey-medium;
+  }
+
+  img {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+}
+
+.description {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  p {
+    text-align: justify;
+    color: $color-black;
+  }
+}

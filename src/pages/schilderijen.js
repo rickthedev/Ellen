@@ -33,7 +33,7 @@ export default function SchilderijPage() {
   return (
     <Layout>
       <Wrapper>
-        <h1>Gallery</h1>
+        <h1>Schilderijen</h1>
         <CardGrid data={data}></CardGrid>
       </Wrapper>
     </Layout>

@@ -18,6 +18,15 @@ export default function Navigation() {
             <Link
               className={NavigationStyles.link}
               activeClassName={NavigationStyles.linkActive}
+              to="/"
+            >
+              Home
+            </Link>
+          </li>
+          <li>
+            <Link
+              className={NavigationStyles.link}
+              activeClassName={NavigationStyles.linkActive}
               to="/about"
             >
               About
@@ -48,6 +57,15 @@ export default function Navigation() {
               to="/grafisch"
             >
               Grafisch
+            </Link>
+          </li>
+          <li>
+            <Link
+              className={NavigationStyles.link}
+              activeClassName={NavigationStyles.linkActive}
+              to="/contact"
+            >
+              Contact
             </Link>
           </li>
         </ul>

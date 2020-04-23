@@ -15,11 +15,16 @@
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
-    color: $color-black;
+  font-family: "Roboto", sans-serif;
+  color: $color-black;
 }
 
 h1 {
   font-weight: 300;
   font-size: 4rem;
+}
+
+h2 {
+  font-weight: 300;
+  font-size: 3rem;
 }
