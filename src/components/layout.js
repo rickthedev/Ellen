@@ -6,11 +6,11 @@ import Div100vh from "react-div-100vh"
 import "../sass/main.scss"
 import LayoutStyles from "./layout.module.scss"
 
-export default function Layout({ children }) {
+export default function Layout({ children, isOnIndex }) {
   return (
     <Div100vh style={{ minHeight: "100rvh" }} className={LayoutStyles.page}>
       <div className={LayoutStyles.container}>
-        <Navigation></Navigation>
+        <Navigation isOnIndex={isOnIndex}></Navigation>
         {children}
       </div>
       <Footer></Footer>

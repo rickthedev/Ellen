@@ -4,7 +4,7 @@ import { Link } from "gatsby"
 import NavigationStyles from "./navigation.module.scss"
 import Wrapper from "./wrapper"
 
-export default function Navigation() {
+export default function Navigation({isOnIndex}) {
   const [isExpanded, setIsExpanded] = useState(false)
 
   const toggleMenu = e => {
@@ -13,7 +13,7 @@ export default function Navigation() {
   }
 
   let style = {}
-  if (window.location.pathname === "/") {
+  if (isOnIndex) {
     style = { border: "none" }
   }
 
@@ -32,13 +32,15 @@ export default function Navigation() {
             <Link className={NavigationStyles.logo} to="/">
               Home
             </Link>
-            <span
-              role='button'
+            <div
+              role="button"
               tabIndex={0}
               className={NavigationStyles.hamburger}
               onClick={e => toggleMenu(e)}
               onKeyDown={() => "none"}
-            ></span>
+            >
+              <span></span>
+            </div>
           </div>
           <ul>
             <li>

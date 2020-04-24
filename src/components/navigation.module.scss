@@ -45,8 +45,11 @@
     display: none;
   }
 }
+
 @include respond-above(md) {
   .navbar {
+    flex-direction: row;
+
     ul {
       display: flex;
     }
@@ -74,33 +77,41 @@
 }
 
 .hamburger {
-  display: block;
+  padding: .5rem 0;
+
+  margin-left: auto;
+
+  display: flex;
   @include respond-above(md) {
     display: none;
   }
 
-  background-color: $color-black;
-  width: 1.8rem;
-  height: 3px;
-  position: relative;
+  justify-content: center;
+  align-items: center;
 
-  margin-left: auto;
-
-  &::before,
-  &::after {
-    content: "";
+  span {
+    display: block;
     background-color: $color-black;
-    position: absolute;
-    left: 0;
-    right: 0;
+    width: 1.8rem;
     height: 3px;
-  }
+    position: relative;
 
-  &::before {
-    top: -.63rem;
-  }
-  &::after {
-    bottom: -.63rem;
+    &::before,
+    &::after {
+      content: "";
+      background-color: $color-black;
+      position: absolute;
+      left: 0;
+      right: 0;
+      height: 3px;
+    }
+
+    &::before {
+      top: -0.63rem;
+    }
+    &::after {
+      bottom: -0.63rem;
+    }
   }
 
   &:focus {
