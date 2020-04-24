@@ -1,14 +1,9 @@
 @import "../sass/variables.scss";
-@import "../sass/abstract.scss";
 
 .post {
   display: flex;
   flex-direction: column;
   line-height: 1.5;
-
-  @include respond-above(sm) {
-    // width: 80%;
-  }
 
   margin: 0 auto;
 
@@ -24,7 +19,7 @@
 
 .description {
   margin-top: 1rem;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
   p {
     text-align: justify;
     color: $color-black;

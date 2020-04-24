@@ -1,18 +1,19 @@
 import React from "react"
 import Navigation from "./navigation"
 import Footer from "./footer"
+import Div100vh from "react-div-100vh"
 
 import "../sass/main.scss"
 import LayoutStyles from "./layout.module.scss"
 
-export default function Layout(props) {
+export default function Layout({ children }) {
   return (
-    <div className={LayoutStyles.page}>
+    <Div100vh style={{ minHeight: "100rvh" }} className={LayoutStyles.page}>
       <div className={LayoutStyles.container}>
         <Navigation></Navigation>
-        <div className={LayoutStyles.content}>{props.children}</div>
+        {children}
       </div>
       <Footer></Footer>
-    </div>
+    </Div100vh>
   )
 }

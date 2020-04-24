@@ -1,0 +1,18 @@
+@import "../sass/variables.scss";
+
+.header {
+  height: 500px;
+  background-image: linear-gradient(rgba(#000, .5), rgba(#000, .5)), url(https://images.unsplash.com/photo-1568438350562-2cae6d394ad0?ixlib=rb-1.2.1&auto=format&fit=crop&w=2400&q=80);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  h1 {
+    margin: 0;
+    font-size: 5rem;
+    font-weight: 400;
+    color: $color-white;
+  }
+}

@@ -1,75 +1,94 @@
-import React from "react"
+import React, { useState } from "react"
 import { Link } from "gatsby"
 
 import NavigationStyles from "./navigation.module.scss"
 import Wrapper from "./wrapper"
 
 export default function Navigation() {
+  const [isExpanded, setIsExpanded] = useState(false)
+
+  const toggleMenu = e => {
+    e.preventDefault()
+    setIsExpanded(!isExpanded)
+  }
+
+  let style = {}
+  if (window.location.pathname === "/") {
+    style = { border: "none" }
+  }
+
   return (
-    <nav className={NavigationStyles.navbar}>
+    <div className={NavigationStyles.navColor}>
       <Wrapper>
-        <ul>
-          <li>
+        <nav
+          style={style}
+          className={`${NavigationStyles.navbar} ${
+            isExpanded
+              ? NavigationStyles.isExpanded
+              : NavigationStyles.isNotExpanded
+          }`}
+        >
+          <div className={NavigationStyles.navTop}>
             <Link className={NavigationStyles.logo} to="/">
-              LOGO
-            </Link>
-          </li>
-          <li>
-            <Link
-              className={NavigationStyles.link}
-              activeClassName={NavigationStyles.linkActive}
-              to="/"
-            >
               Home
             </Link>
-          </li>
-          <li>
-            <Link
-              className={NavigationStyles.link}
-              activeClassName={NavigationStyles.linkActive}
-              to="/about"
-            >
-              About
-            </Link>
-          </li>
-          <li>
-            <Link
-              className={NavigationStyles.link}
-              activeClassName={NavigationStyles.linkActive}
-              to="/schilderijen"
-            >
-              Schilderijen
-            </Link>
-          </li>
-          <li>
-            <Link
-              className={NavigationStyles.link}
-              activeClassName={NavigationStyles.linkActive}
-              to="/goudsmit"
-            >
-              Goudsmit
-            </Link>
-          </li>
-          <li>
-            <Link
-              className={NavigationStyles.link}
-              activeClassName={NavigationStyles.linkActive}
-              to="/grafisch"
-            >
-              Grafisch
-            </Link>
-          </li>
-          <li>
-            <Link
-              className={NavigationStyles.link}
-              activeClassName={NavigationStyles.linkActive}
-              to="/contact"
-            >
-              Contact
-            </Link>
-          </li>
-        </ul>
+            <span
+              role='button'
+              tabIndex={0}
+              className={NavigationStyles.hamburger}
+              onClick={e => toggleMenu(e)}
+              onKeyDown={() => "none"}
+            ></span>
+          </div>
+          <ul>
+            <li>
+              <Link
+                className={NavigationStyles.link}
+                activeClassName={NavigationStyles.linkActive}
+                to="/about"
+              >
+                About
+              </Link>
+            </li>
+            <li>
+              <Link
+                className={NavigationStyles.link}
+                activeClassName={NavigationStyles.linkActive}
+                to="/schilderijen"
+              >
+                Schilderijen
+              </Link>
+            </li>
+            <li>
+              <Link
+                className={NavigationStyles.link}
+                activeClassName={NavigationStyles.linkActive}
+                to="/goudsmit"
+              >
+                Goudsmit
+              </Link>
+            </li>
+            <li>
+              <Link
+                className={NavigationStyles.link}
+                activeClassName={NavigationStyles.linkActive}
+                to="/grafisch"
+              >
+                Grafisch
+              </Link>
+            </li>
+            <li>
+              <Link
+                className={NavigationStyles.link}
+                activeClassName={NavigationStyles.linkActive}
+                to="/contact"
+              >
+                Contact
+              </Link>
+            </li>
+          </ul>
+        </nav>
       </Wrapper>
-    </nav>
+    </div>
   )
 }

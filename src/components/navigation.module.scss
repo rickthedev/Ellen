@@ -1,39 +1,109 @@
 @import "../sass/variables.scss";
+@import "../sass/abstract.scss";
 
 .navbar {
-  height: 60px;
-  background-color: $color-black;
+  border-bottom: 2px $color-black solid;
+  padding: 2rem;
+  display: flex;
+  flex-direction: row;
 
   ul {
-    list-style-type: none;
-    height: 100%;
+    display: block;
+  }
 
+  .nav-top {
     display: flex;
     align-items: center;
-    justify-content: flex-end;
-    padding: 0 1rem;
+    width: 100%;
+  }
+
+  .nav-color {
+    background-color: $color-white;
+  }
+
+  ul {
+    list-style: none;
+  }
+}
+
+.is-expanded {
+  flex-direction: column;
+
+  ul {
+    margin-top: 2rem;
   }
 
   li {
     &:not(:last-child) {
-      margin-right: 1rem;
+      margin-bottom: 1rem;
     }
-    &:first-child {
-      margin-right: auto;
+  }
+}
+
+.is-not-expanded {
+  ul {
+    display: none;
+  }
+}
+@include respond-above(md) {
+  .navbar {
+    ul {
+      display: flex;
+    }
+
+    li {
+      &:not(:last-child) {
+        margin-right: 1rem;
+      }
     }
   }
 }
 
 .link {
   text-decoration: none;
-  color: $color-grey-light;
+  color: $color-grey-dark;
 }
 
 .link-active {
-  color: $color-white;
+  color: $color-black;
 }
 
 .logo {
   text-decoration: none;
-  color: $color-white;
+  color: $color-black;
+}
+
+.hamburger {
+  display: block;
+  @include respond-above(md) {
+    display: none;
+  }
+
+  background-color: $color-black;
+  width: 1.8rem;
+  height: 3px;
+  position: relative;
+
+  margin-left: auto;
+
+  &::before,
+  &::after {
+    content: "";
+    background-color: $color-black;
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 3px;
+  }
+
+  &::before {
+    top: -.63rem;
+  }
+  &::after {
+    bottom: -.63rem;
+  }
+
+  &:focus {
+    outline: none;
+  }
 }

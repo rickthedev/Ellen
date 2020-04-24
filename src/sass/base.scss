@@ -2,14 +2,14 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-size: 80%;
+  font-size: 90%;
   @include respond-above(xs) {
     font-size: 100%;
   }
 }
 
 h1 {
-  margin: 1rem 0 2rem 0;
+  margin: 2rem 0;
 }
 
 p, a {
