@@ -43,7 +43,7 @@ export default function Navigation({isOnIndex}) {
             </div>
           </div>
           <ul>
-            <li>
+            {/* <li>
               <Link
                 className={NavigationStyles.link}
                 activeClassName={NavigationStyles.linkActive}
@@ -51,7 +51,7 @@ export default function Navigation({isOnIndex}) {
               >
                 About
               </Link>
-            </li>
+            </li> */}
             <li>
               <Link
                 className={NavigationStyles.link}

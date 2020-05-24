@@ -7,7 +7,9 @@ export default function IndexPage(props) {
   return (
     <Layout isOnIndex={true}>
       <Header></Header>
-      <Wrapper></Wrapper>
+      <Wrapper>
+        <h1>About</h1>
+      </Wrapper>
     </Layout>
   )
 }
