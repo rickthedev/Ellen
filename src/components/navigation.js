@@ -4,7 +4,7 @@ import { Link } from "gatsby"
 import NavigationStyles from "./navigation.module.scss"
 import Wrapper from "./wrapper"
 
-export default function Navigation({isOnIndex}) {
+export default function Navigation({ isOnIndex }) {
   const [isExpanded, setIsExpanded] = useState(false)
 
   const toggleMenu = e => {
@@ -29,7 +29,11 @@ export default function Navigation({isOnIndex}) {
           }`}
         >
           <div className={NavigationStyles.navTop}>
-            <Link className={NavigationStyles.logo} to="/">
+            <Link
+              activeClassName={NavigationStyles.linkActive}
+              className={NavigationStyles.logo}
+              to="/"
+            >
               Home
             </Link>
             <div

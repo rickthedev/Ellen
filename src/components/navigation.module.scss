@@ -64,11 +64,12 @@
 
 .link {
   text-decoration: none;
-  color: $color-grey-dark;
+  color: $color-grey-medium;
 }
 
 .link-active {
   color: $color-black;
+  // border-bottom: 1px solid $color-black;
 }
 
 .logo {
