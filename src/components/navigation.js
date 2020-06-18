@@ -85,7 +85,7 @@ export default function Navigation({ isOnIndex }) {
             </li>
             <li>
               <Link
-                className={NavigationStyles.link}
+                className={NavigationStyles.linkContact}
                 activeClassName={NavigationStyles.linkActive}
                 to="/contact"
               >

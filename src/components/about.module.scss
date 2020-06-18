@@ -1,17 +1,24 @@
 @import "../sass/variables.scss";
-@import '../sass//abstract.scss';
+@import "../sass//abstract.scss";
 
 .about {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    padding: 2rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
 
-    @include respond-above(md) {
-        flex-direction: row;
-        justify-content: center;
-    }
+.container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 3rem;
+
+  @include respond-above(md) {
+    flex-direction: row;
+    justify-content: center;
+  }
 }
 
 .portrait {
@@ -23,8 +30,46 @@
   border-radius: 50%;
   margin-bottom: 2rem;
 
-  @include respond-above(sm){
-      margin-bottom: 0;
-      margin-right: 2rem;
+  @include respond-above(md) {
+    margin-bottom: 0;
+    margin-right: 3rem;
   }
+  @include respond-above(md) {
+    height: 12rem;
+    width: 12rem;
+  }
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  @include respond-above(md) {
+    align-items: start;
+    text-align: left;
+  }
+
+  h2 {
+      margin-bottom: 1rem;
+  }
+}
+
+.button {
+    color: $color-white;
+    font-size: 1.2rem;
+    background-color: $color-primary;
+    text-decoration: none;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    margin-top: 2rem;
+
+    box-shadow: .2rem .2rem 1rem rgba($color: $color-primary, $alpha: .3);
+    transition: all .2s;
+    
+    &:hover {
+        background-color: $color-black;
+        box-shadow: .2rem .2rem 1rem rgba($color: $color-black, $alpha: .3);
+    }
 }

@@ -72,13 +72,33 @@
   // border-bottom: 1px solid $color-black;
 }
 
+.link-contact {
+  text-decoration: none;
+  color: $color-white;
+  background-color: $color-primary;
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+  box-shadow: 0rem 0rem 0.3rem rgba($color: $color-primary, $alpha: 0.3);
+  transition: all 0.2s;
+
+  margin-left: -0.3rem;
+  @include respond-above(md) {
+    margin-left: 0;
+  }
+
+  &:hover {
+    background-color: $color-black;
+    box-shadow: 0.1rem 0.1rem 0.3rem rgba($color: $color-black, $alpha: 0.3);
+  }
+}
+
 .logo {
   text-decoration: none;
   color: $color-black;
 }
 
 .hamburger {
-  padding: .5rem 0;
+  padding: 0.5rem 0;
 
   margin-left: auto;
 

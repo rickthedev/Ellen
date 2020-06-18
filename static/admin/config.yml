@@ -27,5 +27,6 @@ collections:
           widget: "select",
           options: ["Available", "Reserved", "Sold"],
         }
+      - {label: "Spotlight", name: 'spotlight', widget: 'select', options: ['Yes', "No"], default: "No"}
       - {label: "Description", name: "description", widget: "text"}
     
