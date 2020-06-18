@@ -11,7 +11,7 @@ export default function IndexPage(props) {
     query {
       allMarkdownRemark(
         sort: { fields: frontmatter___title, order: ASC }
-        filter: { frontmatter: { availability: { eq: "Sold" } } }
+        filter: { frontmatter: { spotlight: { eq: "Yes" } } }
       ) {
         edges {
           node {

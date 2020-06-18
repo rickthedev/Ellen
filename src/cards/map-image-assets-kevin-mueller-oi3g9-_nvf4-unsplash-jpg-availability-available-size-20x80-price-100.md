@@ -4,5 +4,6 @@ title: title3
 size: 20x80
 price: $100
 availability: Sold
+spotlight: Yes
 type: Schilderij
 ---
