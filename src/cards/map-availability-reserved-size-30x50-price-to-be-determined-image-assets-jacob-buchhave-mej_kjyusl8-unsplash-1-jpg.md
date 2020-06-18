@@ -5,6 +5,6 @@ title: title2
 size: 30x50
 price: to be determined
 availability: Reserved
-spotlight: No
+spotlight: Yes
 description: lorem ipsum dolor sit amet
 ---
