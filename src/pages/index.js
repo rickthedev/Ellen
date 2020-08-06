@@ -36,7 +36,6 @@ export default function IndexPage(props) {
     <Layout isOnIndex={true}>
       <Header></Header>
       <Wrapper>
-        {/* <h1>Over Mij</h1> */}
         <About></About>
         <h1>Spotlight</h1>
         <CardGrid data={data}></CardGrid>
